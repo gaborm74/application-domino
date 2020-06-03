@@ -1,7 +1,7 @@
 # application-domino
 Domino game simulator for a job interview.
 
-Web interface is very basic without any effort put into it, it's just used as the result and progress representation is much easier than in a console.
+Web interface is very basic with min to no styling. The reason is that the result and progress representation is much easier in a browser than in a console.
 
 # Usage
 
