@@ -1,0 +1,166 @@
+:root { 
+	--clr: #006194;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: 'Muli', sans-serif;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+}
+
+.wrapper {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: 3fr 6fr;
+	grid-template-areas: 
+		"header  header" 
+		"sidebar content" 
+		"footer  footer";
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+	border-radius: 20px;
+	overflow: hidden;
+	width: 100%;
+	max-width: 300px;
+}
+
+.form-input, .form-button {
+	font-family: inherit; 
+	font-weight: 800;
+	font-size: 14px;
+	letter-spacing: 1px;
+	border: 0;
+	text-transform: uppercase;
+}
+
+*:focus {
+	outline: none;
+}
+.form-input {
+	padding: 1.5em;
+}
+
+.form-input::placeholder {
+	opacity: 0.35;
+}
+
+.form-input:focus::placeholder {
+	color: var(- -clr);
+	opacity: 0.85;
+}
+
+.form-item:first-of-type {
+	position: relative;
+}
+
+.form-item {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-item:first-of-type::after {
+	content: '';
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	height: 1px;
+	background: rgba(0, 0, 0, 0.1);
+}
+
+.form-button {
+	background: var(--clr);
+	color: white;
+	padding: 1.25em 2.25em;
+}
+
+/**
+ * Style for screens > 550px 
+ */
+@media only screen and (min-width: 650px) {
+	.form {
+		flex-direction: row;
+		max-width: 450px;
+		border: 8px solid white;
+		border-radius: 3em;
+	}
+	.form-item {
+		justify-content: center;
+		flex-grow: 1;
+	}
+	.form-button {
+		border-radius: 2em;
+		margin-left: auto;
+		cursor:pointer;
+	}
+	.form-item:first-of-type::after {
+		right: 0;
+		top: 0;
+		bottom: 0;
+		left: initial;
+		width: 1px;
+		height: initial;
+	}
+}
+
+.error-tip {
+	font-size: 14;
+	font-weight: 800;
+  background-color: #fce4e4;
+  border: 1px solid #fcc2c3;
+  float: left;
+  padding: 10px 15px;
+  color: #cc0033;
+  width: 60%;
+  text-align: center;
+  border-radius: 3em;
+  margin-top: -10px;
+	display: none;
+}
+
+/**
+
+*/
+.box {
+	border-radius: 5px;
+	padding: 10px 20px;
+	font-size: 150%;
+}
+
+.header {
+	grid-area: header;
+	text-align: center;
+	padding: 0;
+	box-shadow: 0px 5px 5px -5px rgba(173, 173, 173, 0.82);
+}
+
+.footer {
+	grid-area: footer;
+	box-shadow: 0px -5px 5px -5px rgba(173, 173, 173, 0.82);
+}
+
+.sidebar {
+	grid-area: sidebar;
+	box-shadow: 5px 0px 5px -5px rgba(173, 173, 173, 0.82);
+}
+
+.content {
+	position: relative;
+	grid-area: content;
+}
+
+.input {
+	place-items: center;
+}
+
+.played-tiles {
+	font-size: 3em;
+}
