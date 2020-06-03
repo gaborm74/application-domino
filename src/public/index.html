@@ -1,0 +1,41 @@
+<html>
+
+<!-- Very basic web representation without UX considerations just because the result is more visible than in a console -->
+
+<head>
+<title>Domino App</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+
+<body>
+
+<h1 style="text-align:center; margin: 5rem 3rem;">Domino</h1>
+
+<div class="input-group input-group-lg">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-lg">Number of Players</span>
+  </div>
+  <input id="number-player-input" type="text" class="form-control" aria-label="Number of Players" aria-describedby="inputGroup-sizing-sm">
+  <div class="input-group-append">
+	<button id="start-game-buttton" type="button" class="btn btn-primary btn-lg">Start Game</button>
+  </div>
+</div>
+
+<div id="input-alert" class="alert alert-danger collapse" role="alert" >
+  Number of players must be between 2 and 4 inclusive
+</div>
+
+
+<div id="progress" style="margin-left: 1rem" ></div>
+<div id="result" style="font-size: 1.5rem; margin: 0.5rem"></div>
+<div id="played-tiles" style="font-size: 5rem; margin-left: 1rem;"></div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="resources/js/domino.js"></script>
+</body>
+</html>
