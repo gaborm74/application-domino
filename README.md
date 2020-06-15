@@ -3,6 +3,8 @@ Domino game simulator for a job interview.
 
 Web interface is very basic with min to no styling. The reason is that the result and progress representation is much easier in a browser than in a console.
 
+For a pure API version in Laravel/Passport see https://github.com/gaborm74/application-domino-api
+
 # Usage
 
 ## root dir for web server
